@@ -1,0 +1,550 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  height: 300vh;
+}
+
+body {
+  background: #dfe9f5;
+}
+
+
+/* Cabeçalho */
+
+header {
+  padding: 50px;
+  width: 100%;
+  background-color: #1e85b2;
+  position: fixed;
+  top: 0;
+  margin: 0;
+  transition: 1s;
+}
+/*
+.titulo {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  font-weight: bold;
+  font-size: 40px;
+  margin: 0;
+  padding-bottom: 10px;
+  color: #444;
+
+}
+
+
+.titulo span {
+  color: #ce7a2b;
+}
+*/
+header.rolagem {
+  background-color: #fff;
+  padding: 10px;
+}
+
+header.rolagem input{
+ 
+  color: #fff;
+  border-color: #ce7a2b;
+}
+
+header.rolagem a {
+  color: #ffffff;
+}
+
+.container {
+  margin: auto;
+}
+
+.pesquisar {
+  position: relative;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.pesquisar input {
+  width: 400px;
+  height: 30px;
+  text-align: center;
+  border: 20px;
+  margin-right: 10px;
+}
+
+.pesquisar button {
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  border: 20px;
+  background-color: #d8920a;
+  color: #fff;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.pesquisar button:hover {
+  background-color: #8e6625;
+  color: #fff;
+  box-shadow: 0px 0px 15px #8e6625;
+  transition: 0.5s;
+}
+
+.sub-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  background-color: #d8920a;
+}
+
+.sub-nav li {
+  margin-right: 10px;
+
+}
+
+.sub-nav a {
+  color: rgb(255, 255, 255);
+}
+
+
+/* Navbar Lateral */
+nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  z-index: 10;
+  background: #1e85b2;
+  width: 90px;
+  overflow: hidden;
+  transition: width 0.2s linear;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.hamburguer {
+  border: none;
+  background: none;
+  border-top: 3px solid #fff;
+  cursor: pointer;
+}
+
+.hamburguer::before,
+.hamburguer::after {
+  content: " ";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin-top: 5px;
+}
+
+.logo {
+  text-align: center;
+  display: flex;
+  transition: all 0.5s ease;
+
+}
+
+.logo img {
+  width: 70px;
+  border-radius: 50%;
+}
+
+.logo span {
+  font-weight: bold;
+  padding: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+a {
+  position: relative;
+  color: #fff;
+  font-size: 14px;
+  display: table;
+  width: 300px;
+  padding: 10px;
+}
+
+nav i {
+  position: relative;
+  width: 70px;
+  height: 40px;
+  top: 14px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.nav-item {
+  position: relative;
+  top: 12px;
+  margin-left: 10px;
+}
+
+a:hover {
+  background: #8e6625;
+  color: #fff
+}
+
+nav:hover {
+  width: 280px;
+  transition: all 0.5s ease;
+}
+
+
+
+/* INDEX */
+
+#conteudo {
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.cultura-net-container {
+  display: flex;
+  gap: 10rem;
+  padding: 30px 0 0 0;
+}
+
+.container-slider {
+  display: flex;
+  box-sizing: border-box;
+  width: 600px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.container-images {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+}
+
+.slider {
+  opacity: 0;
+  transition: opacity 1s;
+  position: absolute;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px #50bc57;
+}
+
+.ativo {
+  opacity: 1;
+}
+
+#btn-voltar,
+#btn-avancar {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#btn-voltar i,
+#btn-avancar i {
+  font-size: 30px;
+}
+
+.ramais-importantes {
+  border-collapse: collapse;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 360px;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0px 0px 15px #50bc57;
+  border-radius: 20px;
+}
+
+.ramais-importantes table {
+  width: 100%;
+  padding: 5px;
+}
+
+.ramais-importantes h2 {
+  text-align: center;
+  padding: 20px;
+}
+
+.ramais-importantes th,
+td {
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 3px;
+  text-align: left;
+}
+
+.ramais-importantes .th {
+  background-color: #f2f2f2;
+}
+
+.ramais-importantes tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.ramais-importantes tr:hover {
+  background-color: #ddd;
+}
+
+.container-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 40px;
+  border-radius: 20px;
+  gap: 4rem;
+}
+
+.card {
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 0px 15px #50bc57;
+}
+
+.card a {
+  color: #000;
+}
+
+.card:hover {
+  cursor: pointer;
+  transition: .7s;
+  transform: scale(1.1);
+  box-shadow: 0px 0px 40px #50bc57;
+}
+
+.card img {
+  width: 300px;
+}
+
+.card h3 {
+  margin-top: 0;
+  padding: 5px;
+  text-align: center;
+  margin: 20px 0;
+  border-bottom: 1px dashed #444;
+}
+
+.container-btn-social {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.btn-social {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 0;
+  bottom: 10px;
+  border-radius: 50%;
+}
+
+.btn-social i {
+  color: #eee;
+  background-color: transparent;
+  font-size: 35px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 9px;
+  border-radius: 50%;
+  background-color: #50bc57;
+}
+
+.btn-social button {
+  background-color: transparent;
+  width: 100px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+
+/* Administração */
+
+.container-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: #50bc5736;
+}
+
+
+.container-solicitacoes .container-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* Cria 3 colunas com largura igual */
+  grid-gap: 10px;
+  /* Espaçamento entre as células */
+}
+
+.container-solicitacoes .card {
+  display: grid;
+}
+
+
+/* FOOTER */
+
+footer{
+  background-color: #1e85b2;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 850px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hamburguer {
+    display: block;
+  }
+
+  .pesquisar {
+    display: block;
+    right: 2px;
+
+  }
+
+  .pesquisar button {
+    display: none;
+  }
+
+  .pesquisar input {
+    width: 200px;
+
+  }
+
+  .sub-nav {
+    flex-direction: column;
+  }
+
+  .sub-nav li {
+    border-right: none;
+    border-bottom: dashed #444 1px;
+    padding: 5px;
+  }
+
+  .cultura-net-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+
+  }
+
+  .container-slider {
+    display: flex;
+
+    box-sizing: border-box;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .container-images {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+  }
+
+  .ramais-importantes {
+
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 360px;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    box-shadow: 0px 0px 15px #50bc57;
+    border-radius: 20px;
+  }
+
+  .container-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 40px;
+    border-radius: 20px;
+    gap: 2rem;
+  }
+
+  .titulo {
+    margin-top: 110px;
+  }
+
+  .btn-social {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    border-radius: 50%;
+    margin-top: 30px;
+  }
+
+  .btn-social button {
+    background-color: transparent;
+    width: 80px;
+    cursor: pointer;
+    margin-top: 5px;
+  }
+
+  .container-solicitacoes .container-cards {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+}
